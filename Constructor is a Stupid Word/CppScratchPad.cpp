@@ -9,7 +9,7 @@ using namespace std;
 // ------------------------- "Constructor" is a Stupid Word ------------------------------------
 //ref link:https://www.youtube.com/watch?v=k3OGpTFFCTg&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=25
 
-// the "new" operator in main is the creating the object
+// in C# the "new" operator in main is the creation of the object
 
 // -------------------- C# -----------------------------
 //class Base
@@ -33,7 +33,7 @@ using namespace std;
 //}
 // -------------------- C# -----------------------------END
 
-// constructor doesnt create the object
+
 
 class Base
 {
