@@ -10,50 +10,91 @@ using namespace std;
 //ref link:https://www.youtube.com/watch?v=k3OGpTFFCTg&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=25
 
 // in C# the "new" operator in main is the creation of the object
+// why the Base() execute before the Derived()? 
 
 // -------------------- C# -----------------------------
-class Base
-{
-	int meInt;
-	public Base() { 
-		Console.WriteLine("Base()" + meInt); }
-}
-
-class Derived : Base
-{
-	float meFloat;
-	public Derived() { 
-		Console.WriteLine("Derived()" + meFloat); }
-}
-
-class MainClass
-{
-	static void Main()
-	{
-		new Derived();		//output: Base() 0 Derived() 0
-	}
-}
+//class Base
+//{
+//	int meInt;
+//	public Base() { 
+//		Console.WriteLine("Base()" + meInt); }
+//}
+//
+//class Derived : Base
+//{
+//	float meFloat;
+//	public Derived() { 
+//		Console.WriteLine("Derived()" + meFloat); }
+//}
+//
+//class MainClass
+//{
+//	static void Main()
+//	{
+//		new Derived();		//output: Base() 0 Derived() 0		// in C# dotnet initializes by defualt to 0
+//	}
+//}
 // -------------------- C# -----------------------------END
 
+// Constructors are just functions
 
+//class Base
+//{
+//	int meInt;
+//public:
+//	Base() { cout << "Base() " << meInt << endl; }
+//};
+//
+//class Derived : public Base
+//{
+//	float meFloat;
+//public:
+//	Derived() { cout << "Derived() " << meFloat << endl; }
+//};
+//
+//void main()
+//{
+//	Derived d;		//output: Base() -858993460 Derived() -1.07374e+08		// in C++ theres no dotnet so the default is base on your computer operating system(ex. 64-bit OS/basedprocessor or 86-bitOS)
+//}
 
 class Base
 {
+protected:
 	int meInt;
 public:
-	Base() { cout << "Base()" << endl; }
+	//Base() 
+	//{
+	//	meInt = 50;
+	//	cout << "Base() " << meInt << endl;
+	//}
+	void initialize()
+	{
+		meInt = 50;
+		cout << "Base() " << meInt << endl; 
+	}
 };
 
 class Derived : public Base
 {
 	float meFloat;
 public:
-	Derived() { cout << "Derived()" << endl; }
+	//Derived() 
+	//{ 
+	//	meFloat = meInt;
+	//	cout << "Derived() " << meFloat << endl; 
+	//}
+	void initialize()
+	{
+		Base::initialize();
+		meFloat = meInt;
+		cout << "Derived() " << meFloat << endl;
+	}
 };
 
 void main()
 {
-	Derived d;		//output: Base() Derived()
+	Derived d;		//output: Base() 50 Derived() 50		// in C++ theres no dotnet so the default is base on your computer operating system(ex. 64-bit OS/basedprocessor or 86-bitOS)
+	d.initialize();		//output: Base() 50 Derived() 50
 }
 
 
