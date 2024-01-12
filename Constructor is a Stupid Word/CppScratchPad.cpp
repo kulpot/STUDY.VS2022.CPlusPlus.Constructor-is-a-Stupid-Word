@@ -26,7 +26,7 @@ using namespace std;
 //{
 //	static void Main()
 //	{
-//		new Derived();
+//		new Derived();		//output: Base() Derived()
 //	}
 //}
 // -------------------- C# -----------------------------END
@@ -47,7 +47,7 @@ public:
 
 void main()
 {
-	Derived d;
+	Derived d;		//output: Base() Derived()
 }
 
 
