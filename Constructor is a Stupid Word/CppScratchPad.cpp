@@ -12,25 +12,27 @@ using namespace std;
 // in C# the "new" operator in main is the creation of the object
 
 // -------------------- C# -----------------------------
-//class Base
-//{
-//	int meInt;
-//	public Base() { Console.WriteLine("Base()"); }
-//}
-//
-//class Derived : Base
-//{
-//	float meFloat;
-//	public Derived() { Console.WriteLine("Derived()"); }
-//}
-//
-//class MainClass
-//{
-//	static void Main()
-//	{
-//		new Derived();		//output: Base() Derived()
-//	}
-//}
+class Base
+{
+	int meInt;
+	public Base() { 
+		Console.WriteLine("Base()" + meInt); }
+}
+
+class Derived : Base
+{
+	float meFloat;
+	public Derived() { 
+		Console.WriteLine("Derived()" + meFloat); }
+}
+
+class MainClass
+{
+	static void Main()
+	{
+		new Derived();		//output: Base() 0 Derived() 0
+	}
+}
 // -------------------- C# -----------------------------END
 
 
