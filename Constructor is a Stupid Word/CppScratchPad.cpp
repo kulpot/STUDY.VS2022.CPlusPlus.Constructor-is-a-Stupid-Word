@@ -9,8 +9,46 @@ using namespace std;
 // ------------------------- "Constructor" is a Stupid Word ------------------------------------
 //ref link:https://www.youtube.com/watch?v=k3OGpTFFCTg&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=25
 
+// -------------------- C# -----------------------------
+//class Base
+//{
+//	int meInt;
+//	public Base() { Console.WriteLine("Base()"); }
+//}
+//
+//class Derived : Base
+//{
+//	float meFloat;
+//	public Derived() { Console.WriteLine("Derived()"); }
+//}
+//
+//class MainClass
+//{
+//	static void Main()
+//	{
+//		new Derived();
+//	}
+//}
+// -------------------- C# -----------------------------END
 
+class Base
+{
+	int meInt;
+public:
+	Base() { cout << "Base()" << endl; }
+};
 
+class Derived : public Base
+{
+	float meFloat;
+public:
+	Derived() { cout << "Derived()" << endl; }
+};
+
+void main()
+{
+	Derived d;
+}
 
 
 
