@@ -6,22 +6,55 @@ using std::endl;
 using std::string;
 using namespace std;
 
+// ------------------------- "Constructor" is a Stupid Word ------------------------------------
+//ref link:https://www.youtube.com/watch?v=k3OGpTFFCTg&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=25
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // -------------------- C++ typedef ----------------------------------
 //ref link:https://www.youtube.com/watch?v=lrDK6aZddUo&list=PLRwVmtr-pp05LyV3bYHwrFacNSNjbUqS6&index=25
 
-typedef float FLOAT32;
-typedef double FLOAT64;
-typedef unsigned int U32;
-
-void main()
-{
-	U32 bigInt = 23456;
-	//unsigned int bigInt = 23456;
-	FLOAT32 myFloat = 6;
-	FLOAT64 myDouble = 6;
-	//float myFloat = 6;			// float 32bits		// FLOAT32 - explicit
-	//double myDouble = 6;		// double 64bits	//	FLOAT64 - explicit
-}
+//typedef float FLOAT32;
+//typedef double FLOAT64;
+//typedef unsigned int U32;
+//
+//void main()
+//{
+//	U32 bigInt = 23456;
+//	//unsigned int bigInt = 23456;
+//	FLOAT32 myFloat = 6;
+//	FLOAT64 myDouble = 6;
+//	//float myFloat = 6;			// float 32bits		// FLOAT32 - explicit
+//	//double myDouble = 6;		// double 64bits	//	FLOAT64 - explicit
+//}
 
 
 
